@@ -7,7 +7,6 @@ import { ViewMessageComponent } from './view-message/view-message.component';
 import { ViewInfoComponent } from './view-info/view-info.component';
 import { ViewTemplateComponent } from './view-template/view-template.component';
 
-
 @NgModule({
   declarations: [
     ViewHomeComponent,
