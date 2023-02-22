@@ -164,7 +164,7 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { inject, Inject, NgModule } from &#x27;@angular/core&#x27;;
 import { CommonModule } from &#x27;@angular/common&#x27;;
 import { AuthService } from &#x27;./services/auth.service&#x27;;
 import { MessageService } from &#x27;./services/message.service&#x27;;
@@ -181,7 +181,15 @@ import { BusEventService } from &#x27;./services/bus-event.service&#x27;;
     BusEventService
   ]
 })
-export class CoreModule { }
+export class CoreModule { 
+  // auth &#x3D; inject(AuthService)
+  constructor(
+    /* @Inject(AuthService) auth:AuthService */
+    private auth:AuthService
+  ){
+    console.warn(this.auth)
+  }
+}
 </code></pre>
     </div>
 </div>

@@ -12,13 +12,13 @@
 <nav class="bg-light">
     <ul ngbNav class="nav-tabs">
         <li [ngbNavItem]="1">
-            <a ngbNavLink routerLink="/app">Home</a>
+            <a ngbNavLink routerLink="/{{routeSegment}}">Home</a>
         </li>
         <li [ngbNavItem]="2">
-            <a ngbNavLink routerLink="/app/message">Message</a>
+            <a ngbNavLink routerLink="/{{routeSegment}}/message">Message</a>
         </li>
         <li [ngbNavItem]="3">
-            <a ngbNavLink routerLink="/app/info">Info</a>
+            <a ngbNavLink routerLink="/{{routeSegment}}/info">Info</a>
         </li>
     </ul>
 </nav>

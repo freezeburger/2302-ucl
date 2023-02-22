@@ -38,7 +38,7 @@
   <li>Components</li>
   <li
   >
-  AppComponent</li>
+  SplashScreenComponent</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -64,7 +64,7 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>src/app/app.component.ts</code>
+    <code>src/app/splash/splash-screen/splash-screen.component.ts</code>
 </p>
 
 
@@ -89,19 +89,19 @@
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>app-root</code></td>
+                <td class="col-md-9"><code>app-splash-screen</code></td>
             </tr>
 
             <tr>
                 <td class="col-md-3">styleUrls</td>
-                <td class="col-md-9"><code>./app.component.scss</code></td>
+                <td class="col-md-9"><code>./splash-screen.component.scss</code></td>
             </tr>
 
 
 
             <tr>
                 <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>./app.component.html</code></td>
+                <td class="col-md-9"><code>./splash-screen.component.html</code></td>
             </tr>
 
 
@@ -130,24 +130,38 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
 
 @Component({
-  selector: &#x27;app-root&#x27;,
-  templateUrl: &#x27;./app.component.html&#x27;,
-  styleUrls: [&#x27;./app.component.scss&#x27;]
+  selector: &#x27;app-splash-screen&#x27;,
+  templateUrl: &#x27;./splash-screen.component.html&#x27;,
+  styleUrls: [&#x27;./splash-screen.component.scss&#x27;]
 })
-export class AppComponent {}
+export class SplashScreenComponent {
+
+}
 </code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">
-&lt;router-outlet&gt;&lt;/router-outlet&gt;</code></pre>
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;spinner-grow text-info&quot; role&#x3D;&quot;status&quot;&gt;
+    &lt;span class&#x3D;&quot;visually-hidden&quot;&gt;Loading...&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;a class&#x3D;&quot;m-5 btn btn-light btn-lg&quot; routerLink&#x3D;&quot;/app&quot;&gt;Enter&lt;/a&gt;</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-styleData">
                 <p class="comment">
-                    <code>./app.component.scss</code>
+                    <code>./splash-screen.component.scss</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss"></code></pre>
+                <pre class="line-numbers"><code class="language-scss">:host{
+    display: flex;
+    flex-direction: column;
+    height:100vh;
+    width:100vw;
+    background-color:var(--ucl-primary-color);
+    color:white;
+    align-items: center;
+    justify-content: center;
+}</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-tree">
@@ -175,10 +189,10 @@ export class AppComponent {}
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><router-outlet></router-outlet></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="spinner-grow text-info" role="status">    <span class="visually-hidden">Loading...</span></div><a class="m-5 btn btn-light btn-lg" routerLink="/app">Enter</a></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'SplashScreenComponent', 'selector': 'app-splash-screen'},{'name': 'ViewHomeComponent', 'selector': 'app-view-home'},{'name': 'ViewInfoComponent', 'selector': 'app-view-info'},{'name': 'ViewMessageComponent', 'selector': 'app-view-message'},{'name': 'ViewTemplateComponent', 'selector': 'app-view-template'}];
     var DIRECTIVES = [];
-    var ACTUAL_COMPONENT = {'name': 'AppComponent'};
+    var ACTUAL_COMPONENT = {'name': 'SplashScreenComponent'};
 </script>
 <script src="../js/tree.js"></script>
 
@@ -224,7 +238,7 @@ export class AppComponent {}
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
-            var COMPODOC_CURRENT_PAGE_URL = 'AppComponent.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'SplashScreenComponent.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

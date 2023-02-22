@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path:'splash',
+    path:'',
     loadChildren:() => import('./splash/splash.module').then( m => m.SplashModule)
   },
   {
@@ -13,7 +13,7 @@ const routes: Routes = [
   {
     path:'**',
     pathMatch:'full',
-    redirectTo:'splash'
+    redirectTo:''
   }
 ];
 

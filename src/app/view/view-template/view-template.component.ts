@@ -1,5 +1,6 @@
 import { Component, EventEmitter, HostListener, Input, OnChanges, Output, ViewChild } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import { Router } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -12,10 +13,16 @@ export class ViewTemplateComponent implements OnChanges {
   @Input() pageTitle = 'Default Page';
   @Output() onTogglePause = new EventEmitter();
 
+  get routeSegment(){
+    return this.router.url.split('/')[1]
+  }
+
   constructor(
     private modalService: NgbModal,
-    private titleService: Title
-  ) { }
+    private titleService: Title,
+    private router:Router
+  ) { 
+  }
 
   ngOnChanges() {
     this.titleService.setTitle(this.pageTitle);
