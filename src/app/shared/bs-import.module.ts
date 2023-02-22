@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { NgbAccordionModule, NgbAlertModule, NgbDatepickerModule, NgbPopoverModule, NgbProgressbarModule, NgbTypeaheadModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbAccordionModule, NgbAlertModule, NgbDatepickerModule, NgbNavModule, NgbPopoverModule, NgbProgressbarModule, NgbTypeaheadModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   exports: [
@@ -8,7 +8,8 @@ import { NgbAccordionModule, NgbAlertModule, NgbDatepickerModule, NgbPopoverModu
     NgbDatepickerModule,
     NgbPopoverModule,
     NgbProgressbarModule,
-    NgbTypeaheadModule
+    NgbTypeaheadModule,
+    NgbNavModule 
   ]
 })
 export class BsImportModule { }

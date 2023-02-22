@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class ViewHomeComponent {
 
+  public handlePause( pauseState:boolean ){
+    console.warn( 'Processes stopped : ' + pauseState );
+  }
+
 }

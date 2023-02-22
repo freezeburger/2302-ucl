@@ -1,4 +1,4 @@
-import { Component, HostListener, Input, OnChanges, ViewChild } from '@angular/core';
+import { Component, EventEmitter, HostListener, Input, OnChanges, Output, ViewChild } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
@@ -10,25 +10,41 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 export class ViewTemplateComponent implements OnChanges {
 
   @Input() pageTitle = 'Default Page';
+  @Output() onTogglePause = new EventEmitter();
 
   constructor(
     private modalService: NgbModal,
     private titleService: Title
   ) { }
 
-  ngOnChanges(){
+  ngOnChanges() {
     this.titleService.setTitle(this.pageTitle);
   }
 
   @ViewChild('content') private content: any;
 
+  private get pauseState() {
+    return this.modalService.hasOpenModals()
+  }
+
   @HostListener('window:keydown.alt.p')
   toggle() {
-    if (this.modalService.hasOpenModals()) return this.modalService.dismissAll();
 
-    this.modalService.open(this.content, { ariaLabelledBy: 'modal-basic-title' }).result.then(
-      (result) => { },
-      (reason) => { },
-    );
+    if (this.pauseState === true) {
+
+      this.modalService.dismissAll();
+
+    } else {
+
+      this.modalService
+        .open(this.content, { ariaLabelledBy: 'modal-basic-title' })
+        .result.then(
+          (result) => { },
+          (reason) => { },
+        );
+    }
+
+    setTimeout(() => this.onTogglePause.emit(this.pauseState));
+
   }
 }
