@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-
-
+import { NgbAccordionModule, NgbAlertModule, NgbDatepickerModule, NgbPopoverModule, NgbProgressbarModule, NgbTypeaheadModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
-  declarations: [],
-  imports: [
-    CommonModule
+  exports: [
+    NgbAlertModule,
+    NgbAccordionModule,
+    NgbDatepickerModule,
+    NgbPopoverModule,
+    NgbProgressbarModule,
+    NgbTypeaheadModule
   ]
 })
 export class BsImportModule { }
