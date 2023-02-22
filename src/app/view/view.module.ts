@@ -6,13 +6,15 @@ import { ViewHomeComponent } from './view-home/view-home.component';
 import { ViewMessageComponent } from './view-message/view-message.component';
 import { ViewInfoComponent } from './view-info/view-info.component';
 import { ViewTemplateComponent } from './view-template/view-template.component';
+import { PageTitleDirective } from './directives/page-title.directive';
 
 @NgModule({
   declarations: [
     ViewHomeComponent,
     ViewMessageComponent,
     ViewInfoComponent,
-    ViewTemplateComponent
+    ViewTemplateComponent,
+    PageTitleDirective
   ],
   imports: [
     ViewRoutingModule,

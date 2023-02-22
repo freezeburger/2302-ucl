@@ -8,9 +8,9 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
   templateUrl: './view-template.component.html',
   styleUrls: ['./view-template.component.scss']
 })
-export class ViewTemplateComponent implements OnChanges {
+export class ViewTemplateComponent{
 
-  @Input() pageTitle = 'Default Page';
+  public pageTitle = 'Default Page';
   @Output() onTogglePause = new EventEmitter();
 
   get routeSegment(){
@@ -19,13 +19,8 @@ export class ViewTemplateComponent implements OnChanges {
 
   constructor(
     private modalService: NgbModal,
-    private titleService: Title,
     private router:Router
   ) { 
-  }
-
-  ngOnChanges() {
-    this.titleService.setTitle(this.pageTitle);
   }
 
   @ViewChild('content') private content: any;
