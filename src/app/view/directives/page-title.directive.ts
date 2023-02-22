@@ -21,5 +21,4 @@ export class PageTitleDirective {
     if(this.view) this.view.pageTitle = this.appPageTitle;
   }
 
-
 }
