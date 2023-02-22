@@ -80,6 +80,26 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="modules/CoreModule.html" data-type="entity-link" >CoreModule</a>
+                                <li class="chapter inner">
+                                    <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                        'data-target="#injectables-links-module-CoreModule-11c92b34442024d517fefce7e0dfca94f5814d69276844369aad47063278b7d7d026a81c2b3590399f3426644da6a0491a8b0a192bcd7554a17b9ba625bc4e8f"' : 'data-target="#xs-injectables-links-module-CoreModule-11c92b34442024d517fefce7e0dfca94f5814d69276844369aad47063278b7d7d026a81c2b3590399f3426644da6a0491a8b0a192bcd7554a17b9ba625bc4e8f"' }>
+                                        <span class="icon ion-md-arrow-round-down"></span>
+                                        <span>Injectables</span>
+                                        <span class="icon ion-ios-arrow-down"></span>
+                                    </div>
+                                    <ul class="links collapse" ${ isNormalMode ? 'id="injectables-links-module-CoreModule-11c92b34442024d517fefce7e0dfca94f5814d69276844369aad47063278b7d7d026a81c2b3590399f3426644da6a0491a8b0a192bcd7554a17b9ba625bc4e8f"' :
+                                        'id="xs-injectables-links-module-CoreModule-11c92b34442024d517fefce7e0dfca94f5814d69276844369aad47063278b7d7d026a81c2b3590399f3426644da6a0491a8b0a192bcd7554a17b9ba625bc4e8f"' }>
+                                        <li class="link">
+                                            <a href="injectables/AuthService.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >AuthService</a>
+                                        </li>
+                                        <li class="link">
+                                            <a href="injectables/BusEventService.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >BusEventService</a>
+                                        </li>
+                                        <li class="link">
+                                            <a href="injectables/MessageService.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >MessageService</a>
+                                        </li>
+                                    </ul>
+                                </li>
                             </li>
                             <li class="link">
                                 <a href="modules/NgImportModule.html" data-type="entity-link" >NgImportModule</a>
