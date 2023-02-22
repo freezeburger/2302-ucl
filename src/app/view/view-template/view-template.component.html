@@ -7,15 +7,20 @@
                align-items-start
                flex-column">
     <h1>UCL</h1>
-    <h2>Page Title</h2>
+    <h2>{{pageTitle}}</h2>
 </header>
 
 <main class="p-5">
-
+    <ng-content></ng-content>
 </main>
 
 <footer class="p-4 navbar bg-dark text-white fixed-bottom">
     <h4>Footer Info</h4>
     <p  class="text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum, sunt consectetur quod corporis tenetur ipsam temporibus nam quas illum impedit odio optio consequuntur, quia quo rerum nihil. In, nobis pariatur?</p>
 </footer>
+
+
+<ng-template #content let-modal>
+    <h1 class="text-center">Application Paused</h1>
+</ng-template>
 

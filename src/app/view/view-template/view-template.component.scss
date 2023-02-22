@@ -16,10 +16,19 @@ header{
 }
 
 main{
-    height: 65vh;
+    height: 70vh;
     overflow-y: auto;
 }
 
 footer{
     height: 15vh;
 }
+
+@media (max-height: 780px) { 
+    main{
+        height: 85vh;
+    }
+    footer{
+        display:none;
+    }
+ }
