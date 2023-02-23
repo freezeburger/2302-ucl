@@ -8,6 +8,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./view-template.component.scss']
 })
 export class ViewTemplateComponent {
+  
   public pageTitle = 'Default Page';
   @ViewChild('content') public content: any;
 
