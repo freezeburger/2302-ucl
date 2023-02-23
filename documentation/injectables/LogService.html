@@ -28,17 +28,19 @@
                    <compodoc-menu mode="normal"></compodoc-menu>
                </div>
                <!-- START CONTENT -->
-               <div class="content component">
+               <div class="content injectable">
                    <div class="content-data">
 
 
 
 
+
+
+
+
 <ol class="breadcrumb">
-  <li>Components</li>
-  <li
-  >
-  ViewHomeComponent</li>
+  <li>Injectables</li>
+  <li >LogService</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -48,74 +50,22 @@
         <li >
             <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
         </li>
-        <li >
-            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
-        </li>
-        <li >
-            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
-        </li>
-        <li >
-            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
-        </li>
 </ul>
 
 <div class="tab-content">
-    <div class="tab-pane fade active in" id="c-info"><p class="comment">
-    <h3>File</h3>
-</p>
-<p class="comment">
-    <code>src/app/view/view-home/view-home.component.ts</code>
-</p>
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/core/services/log.service.ts</code>
+        </p>
 
 
 
 
 
-
-<section>
-    <h3>Metadata</h3>
-    <table class="table table-sm table-hover metadata">
-        <tbody>
-
-
-
-
-
-
-
-
-
-
-
-            <tr>
-                <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>app-view-home</code></td>
-            </tr>
-
-            <tr>
-                <td class="col-md-3">styleUrls</td>
-                <td class="col-md-9"><code>./view-home.component.scss</code></td>
-            </tr>
-
-
-
-            <tr>
-                <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>./view-home.component.html</code></td>
-            </tr>
-
-
-
-
-
-
-
-
-        </tbody>
-    </table>
-</section>
-
-    <section>
+            <section>
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
@@ -129,8 +79,7 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                    <span class="modifier">Public</span>
-                                <a href="#handlePause" >handlePause</a>
+                                <a href="#log" >log</a>
                             </li>
                         </ul>
                     </td>
@@ -145,11 +94,7 @@
 </section>
 
 
-
-
-
-
-    <section>
+            <section>
     
     <h3 id="methods">
         Methods
@@ -158,26 +103,24 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="handlePause"></a>
+                    <a name="log"></a>
                     <span class="name">
-                        <span class="modifier">Public</span>
-                        <span ><b>handlePause</b></span>
-                        <a href="#handlePause"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>log</b></span>
+                        <a href="#log"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-                    <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>handlePause(pauseState: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+<code>log(message: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, level: LogInfo)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="10"
-                            class="link-to-prism">src/app/view/view-home/view-home.component.ts:10</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="7"
+                            class="link-to-prism">src/app/core/services/log.service.ts:7</a></div>
                 </td>
             </tr>
 
@@ -198,9 +141,21 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>pauseState</td>
+                                    <td>message</td>
                                     <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>level</td>
+                                    <td>
+                                            <code>LogInfo</code>
                                     </td>
 
                                     <td>
@@ -227,84 +182,26 @@
     </table>
 </section>
 
-</div>
+    </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Input } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
+import { ApplicationLogger, LogInfo } from &#x27;ucl&#x27;;
 
-@Component({
-  selector: &#x27;app-view-home&#x27;,
-  templateUrl: &#x27;./view-home.component.html&#x27;,
-  styleUrls: [&#x27;./view-home.component.scss&#x27;]
-})
-export class ViewHomeComponent {
+@Injectable()
+export class LogService implements ApplicationLogger {
 
-  public handlePause( pauseState:boolean ){
-    console.warn( &#x27;Processes stopped : &#x27; + pauseState );
+  log(message: any, level: LogInfo): void {
+    console.groupCollapsed(&#x27;Application Logger&#x27;);
+    console.log(message);
+    console.groupEnd();
   }
-
 }
 </code></pre>
     </div>
 
-    <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;ucl-view-template 
-    uclPausable
-    (onTogglePause)&#x3D;&quot;handlePause($event)&quot;
-    uclPageTitle&#x3D;&quot;Home !!!&quot;&gt;
-    Home Content
-
-    &lt;ucl-view-modal&gt;
-        Modal Content
-    &lt;/ucl-view-modal&gt;
-    
-&lt;/ucl-view-template&gt;
-</code></pre>
-    </div>
-
-    <div class="tab-pane fade " id="c-styleData">
-                <p class="comment">
-                    <code>./view-home.component.scss</code>
-                </p>
-                <pre class="line-numbers"><code class="language-scss"></code></pre>
-    </div>
-
-    <div class="tab-pane fade " id="c-tree">
-        <div id="tree-container"></div>
-        <div class="tree-legend">
-            <div class="title">
-                <b>Legend</b>
-            </div>
-            <div>
-                <div class="color htmlelement"></div><span>Html element</span>
-            </div>
-            <div>
-                <div class="color component"></div><span>Component</span>
-            </div>
-            <div>
-                <div class="color directive"></div><span>Html element with directive</span>
-            </div>
-        </div>
-    </div>
-
-    
 </div>
-
-<script src="../js/libs/vis.min.js"></script>
-<script src="../js/libs/htmlparser.js"></script>
-<script src="../js/libs/deep-iterator.js"></script>
-<script>
-        var COMPONENT_TEMPLATE = '<div><ucl-view-template     uclPausable    (onTogglePause)="handlePause($event)"    uclPageTitle="Home !!!">    Home Content    <ucl-view-modal>        Modal Content    </ucl-view-modal>    </ucl-view-template></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'SplashScreenComponent', 'selector': 'app-splash-screen'},{'name': 'ViewHomeComponent', 'selector': 'app-view-home'},{'name': 'ViewInfoComponent', 'selector': 'app-view-info'},{'name': 'ViewMessageComponent', 'selector': 'app-view-message'}];
-    var DIRECTIVES = [];
-    var ACTUAL_COMPONENT = {'name': 'ViewHomeComponent'};
-</script>
-<script src="../js/tree.js"></script>
-
-
-
-
 
 
 
@@ -343,8 +240,8 @@ export class ViewHomeComponent {
 
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
-            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
-            var COMPODOC_CURRENT_PAGE_URL = 'ViewHomeComponent.html';
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'LogService.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

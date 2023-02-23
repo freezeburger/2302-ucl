@@ -9,7 +9,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class RouterNavComponent {
   
   constructor(
-    public route:ActivatedRoute,
+    /* public route:ActivatedRoute, */
     public router:Router,
   ){}
 }

@@ -150,11 +150,15 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
+
+import { UclModule } from &#x27;ucl&#x27;;
+
 import { BsImportModule } from &#x27;./bs-import.module&#x27;;
 import { NgImportModule } from &#x27;./ng-import.module&#x27;;
 
 @NgModule({
   exports: [
+    UclModule,
     NgImportModule,
     BsImportModule
   ]

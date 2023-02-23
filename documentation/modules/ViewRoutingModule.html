@@ -88,8 +88,13 @@ const routes: Routes &#x3D; [
     component:ViewMessageComponent
   },
   {
-    path:&#x27;&#x27;,
+    path:&#x27;home&#x27;,
     component:ViewHomeComponent
+  },
+  {
+    path:&#x27;**&#x27;,
+    redirectTo:&#x27;home&#x27;,
+    pathMatch:&#x27;prefix&#x27;
   }
 ];
 
