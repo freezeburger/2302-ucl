@@ -1,16 +1,19 @@
 import { NgModule } from '@angular/core';
-import { UclComponent } from './ucl.component';
-
-
+import { PageTitleDirective } from './directives/page-title.directive';
+import { ViewTemplateComponent } from './view-template/view-template.component';
 
 @NgModule({
   declarations: [
-    UclComponent
+  
+    PageTitleDirective,
+       ViewTemplateComponent
   ],
   imports: [
   ],
   exports: [
-    UclComponent
+  
+    PageTitleDirective,
+       ViewTemplateComponent
   ]
 })
 export class UclModule { }

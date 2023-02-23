@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { UclComponent } from './ucl.component';
+import { ViewTemplateComponent } from './view-template.component';
 
-describe('UclComponent', () => {
-  let component: UclComponent;
-  let fixture: ComponentFixture<UclComponent>;
+describe('ViewTemplateComponent', () => {
+  let component: ViewTemplateComponent;
+  let fixture: ComponentFixture<ViewTemplateComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ UclComponent ]
+      declarations: [ ViewTemplateComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(UclComponent);
+    fixture = TestBed.createComponent(ViewTemplateComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
