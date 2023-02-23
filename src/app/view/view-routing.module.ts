@@ -14,8 +14,13 @@ const routes: Routes = [
     component:ViewMessageComponent
   },
   {
-    path:'',
+    path:'home',
     component:ViewHomeComponent
+  },
+  {
+    path:'**',
+    redirectTo:'home',
+    pathMatch:'prefix'
   }
 ];
 

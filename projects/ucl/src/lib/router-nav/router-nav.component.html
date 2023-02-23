@@ -1,13 +1,13 @@
 <nav class="bg-light">
-    <ul ngbNav class="nav-tabs" >
+    <ul ngbNav class="nav-tabs" [activeId]="route.routeConfig?.path">
         
-        <li [ngbNavItem]="1"> 
-            <a ngbNavLink routerLink="{{ '' | withPathRoot }}">Home</a>
+        <li ngbNavItem="home"> 
+            <a ngbNavLink routerLink="{{ 'home' | withPathRoot }}">Home</a>
         </li>
-        <li [ngbNavItem]="2">
+        <li ngbNavItem="message">
             <a ngbNavLink routerLink="{{ 'message' | withPathRoot }}">Message</a>
         </li>
-        <li [ngbNavItem]="3">
+        <li ngbNavItem="info">
             <a ngbNavLink routerLink="{{ 'info' | withPathRoot }}">Info</a>
         </li>
     </ul>

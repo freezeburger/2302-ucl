@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'ucl-router-nav',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./router-nav.component.css']
 })
 export class RouterNavComponent {
-
+  
+  constructor(
+    public route:ActivatedRoute,
+  ){}
 }
