@@ -1,20 +1,25 @@
 import { Component, Optional } from '@angular/core';
+import { ComponentLogger } from '../utils/component-logger';
 import { ViewTemplateComponent } from '../view-template/view-template.component';
 
 @Component({
   selector: 'ucl-view-modal',
   template: `<ng-content></ng-content>`
 })
-export class ViewModalComponent {
+export class ViewModalComponent extends ComponentLogger{
   constructor(
     @Optional() private uclTemplate:ViewTemplateComponent
   ){
-    if(!uclTemplate) console.log(`%c 
+    super();
+
+    if(!uclTemplate) this.log(
+`
 "ViewModalComponent" must be used inside ViewTemplateComponent :
         <ucl-view-template> 
           <ucl-view-modal> 
           </ucl-view-modal> 
         </ucl-view-template> 
-    `, 'color:hotPink')
+`);
+
   }
 }

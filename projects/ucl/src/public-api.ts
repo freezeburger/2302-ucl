@@ -14,3 +14,8 @@ export * from './lib/view-template/view-template.component';
  */
 export * from './lib/directives/page-title.directive';
 export * from './lib/directives/pausable.directive';
+
+/**
+ * Utils
+ */
+export * from './lib/utils/component-logger';
