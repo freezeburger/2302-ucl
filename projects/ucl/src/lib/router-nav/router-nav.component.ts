@@ -10,5 +10,6 @@ export class RouterNavComponent {
   
   constructor(
     public route:ActivatedRoute,
+    public router:Router,
   ){}
 }
