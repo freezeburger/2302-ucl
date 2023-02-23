@@ -20,8 +20,11 @@
     "module": "ES2022",
     "useDefineForClassFields": false,
     "paths": {
-      "ucl": [
+      "@ucl": [
         "dist/ucl"
+      ],
+      "ucl": [
+        "projects/ucl/src/public-api.ts"
       ]
     },
     "lib": [
