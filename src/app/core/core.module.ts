@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { AuthService } from './services/auth.service';
 import { MessageService } from './services/message.service';
 import { BusEventService } from './services/bus-event.service';
+import { LogService } from './services/log.service';
+import { UCL_APPLICATION_LOGGER } from 'ucl';
 
 @NgModule({
   declarations: [],
@@ -12,7 +14,12 @@ import { BusEventService } from './services/bus-event.service';
   providers:[
     AuthService,
     MessageService,
-    BusEventService
+    BusEventService,
+    LogService,
+    {
+      provide:UCL_APPLICATION_LOGGER,
+      useExisting:LogService
+    }
   ]
 })
 export class CoreModule { 

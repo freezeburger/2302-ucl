@@ -11,12 +11,17 @@ import { ViewTemplateComponent } from '../view-template/view-template.component'
 export class ViewModalComponent extends ComponentLogger{
 
   message = `
-  "ViewModalComponent" must be used inside ViewTemplateComponent :
+  "ViewModalComponent" must be used inside "ViewTemplateComponent" :
           <ucl-view-template> 
             <ucl-view-modal> 
             </ucl-view-modal> 
           </ucl-view-template> 
   `
+  /**
+   * Requires to be inside "ViewTemplateComponent"
+   * @param uclTemplate 
+   * @param logService 
+   */
   constructor(
     @Optional() private uclTemplate:ViewTemplateComponent,
     @Optional() @Inject(UCL_APPLICATION_LOGGER) private logService:ApplicationLogger
