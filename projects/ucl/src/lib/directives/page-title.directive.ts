@@ -1,20 +1,19 @@
-import { Directive, Input, Optional } from '@angular/core';
+import { ContentChild, Directive, Input, Optional, TemplateRef, ViewChild } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 
 import { ViewTemplateComponent } from '../view-template/view-template.component';
 
 @Directive({
-  selector: '[uclPageTitle]'
+  selector: 'ucl-view-template[uclPageTitle]'
 })
 export class PageTitleDirective {
 
-  @Input() uclPageTitle = 'Default Title'
+  @Input() uclPageTitle = 'Default Title';
 
   constructor(
     private titleService: Title,
-    @Optional() private view:ViewTemplateComponent
+    private view:ViewTemplateComponent
   ) {
-    console.log(view)
   }
 
   ngOnChanges() {
