@@ -19,3 +19,8 @@ export * from './lib/directives/pausable.directive';
  * Utils
  */
 export * from './lib/utils/component-logger';
+
+/**
+ * Interfaces
+ */
+export * from './lib/interfaces/application-logger';
