@@ -10,6 +10,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 export class ViewTemplateComponent {
   
   public pageTitle = 'Default Page';
+  public active = 2;
   @ViewChild('content') public content: any;
 
 }

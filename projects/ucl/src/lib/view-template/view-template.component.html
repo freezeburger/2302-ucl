@@ -7,19 +7,8 @@
     <h1>UCL</h1>
     <h2>{{pageTitle}}</h2>
 </header>
-<nav class="bg-light">
-    <ul ngbNav class="nav-tabs">
-        <li [ngbNavItem]="1">
-            <a ngbNavLink routerLink="{{ '' | withPathRoot }}">Home</a>
-        </li>
-        <li [ngbNavItem]="2">
-            <a ngbNavLink routerLink="{{ 'message' | withPathRoot }}">Message</a>
-        </li>
-        <li [ngbNavItem]="3">
-            <a ngbNavLink routerLink="{{ 'info' | withPathRoot }}">Info</a>
-        </li>
-    </ul>
-</nav>
+
+<ucl-router-nav></ucl-router-nav>
 
 <main class="p-5">
     <ng-content></ng-content>

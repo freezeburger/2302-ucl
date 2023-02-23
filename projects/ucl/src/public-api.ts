@@ -8,7 +8,7 @@ export * from './lib/ucl.module';
  * Components
  */
 export * from './lib/view-template/view-template.component';
-
+export * from './lib/router-nav/router-nav.component';
 /**
  * Directives
  */
