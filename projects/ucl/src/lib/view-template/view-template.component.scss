@@ -1,0 +1,34 @@
+:host{
+    display: flex;  
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+  }
+  
+  header, main, footer{
+      box-sizing: border-box;
+      overflow: hidden;
+  }
+  
+  header{
+      background-color: var(--ucl-primary-color);
+      height: 15vh;
+  }
+  
+  main{
+      height: 70vh;
+      overflow-y: auto;
+  }
+  
+  footer{
+      height: 15vh;
+  }
+  
+  @media (max-height: 780px) { 
+      main{
+          height: 85vh;
+      }
+      footer{
+          display:none;
+      }
+   }

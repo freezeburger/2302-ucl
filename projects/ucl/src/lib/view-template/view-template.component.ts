@@ -5,7 +5,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'ucl-view-template',
   templateUrl: './view-template.component.html',
-  styleUrls: ['./view-template.component.css']
+  styleUrls: ['./view-template.component.scss']
 })
 export class ViewTemplateComponent {
   public pageTitle = 'Default Page';
