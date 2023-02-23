@@ -4,13 +4,15 @@ import { SharedModule } from './shared/shared.module';
 import { ViewTemplateComponent } from './view-template/view-template.component';
 import { WithPathRootPipe } from './pipes/with-path-root.pipe';
 import { PausableDirective } from './directives/pausable.directive';
+import { ViewModalComponent } from './view-modal/view-modal.component';
 
 @NgModule({
   declarations: [
     PageTitleDirective,
     ViewTemplateComponent,
     WithPathRootPipe,
-    PausableDirective
+    PausableDirective,
+    ViewModalComponent
   ],
   imports: [
     SharedModule
@@ -18,7 +20,8 @@ import { PausableDirective } from './directives/pausable.directive';
   exports: [
     PageTitleDirective,
     PausableDirective,
-    ViewTemplateComponent
+    ViewTemplateComponent,
+    ViewModalComponent
   ]
 })
 export class UclModule { }
