@@ -24,3 +24,8 @@ export * from './lib/utils/component-logger';
  * Interfaces
  */
 export * from './lib/interfaces/application-logger';
+
+/**
+ * Tokens
+ */
+export * from './lib/tokens/application-logger.token';
