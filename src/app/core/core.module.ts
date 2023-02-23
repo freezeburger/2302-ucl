@@ -1,4 +1,4 @@
-import { inject, Inject, NgModule } from '@angular/core';
+import { APP_BOOTSTRAP_LISTENER, APP_INITIALIZER, inject, Inject, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AuthService } from './services/auth.service';
 import { MessageService } from './services/message.service';
@@ -19,6 +19,16 @@ import { UCL_APPLICATION_LOGGER } from 'ucl';
     {
       provide:UCL_APPLICATION_LOGGER,
       useExisting:LogService
+    },
+    {
+      provide: APP_INITIALIZER,
+      useValue: () => console.warn('App Ready'),
+      multi: true
+    },
+    {
+      provide: APP_BOOTSTRAP_LISTENER,
+      useValue: () => console.warn('App Bootstraped'),
+      multi: true
     }
   ]
 })
