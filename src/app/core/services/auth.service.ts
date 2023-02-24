@@ -1,5 +1,6 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { catchError, of } from 'rxjs';
 import { FuncUser } from '../interfaces/functional/user';
 
 const AUTH_API = 'http://localhost:5050/auth';
@@ -13,9 +14,18 @@ export class AuthService {
     private http:HttpClient
   ) { }
 
+  private handleError = (err:HttpErrorResponse ) => {
+    console.log(err); 
+    return of(null)
+  }
+
   login(credentials:FuncUser){
     // Credentials Sanitization
-    this.http.post(AUTH_LOGIN, credentials).subscribe(console.log)
+    this.http.post(AUTH_LOGIN, credentials)
+        .pipe(
+          catchError( this.handleError )
+        )
+        .subscribe(console.log)
   }
 
   register(credentials:FuncUser){
