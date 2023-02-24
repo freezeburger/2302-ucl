@@ -1,1 +1,24 @@
-<p>feat-message works!</p>
+<ng-container *ngIf="(messageService.dataSource$ | async) as messages">
+
+    <code>
+        <pre>{{messages | json }}</pre>
+    </code>
+
+    <hr>
+
+    <div class="alert alert-secondary">
+        You have {{messages.length}} messages.
+    </div>
+
+    <ul class="list-group" *ngIf="messages.length">
+        <li class="list-group-item">
+            <input class="form-control" placeholder="Filter messages">
+        </li>
+        <li class="list-group-item" *ngFor="let msg of messages">
+            <h4>{{msg.title}}</h4>
+            <h5>{{msg.time | date}}</h5>
+            <p>{{msg.content}}</p>
+        </li>
+    </ul>
+
+</ng-container>

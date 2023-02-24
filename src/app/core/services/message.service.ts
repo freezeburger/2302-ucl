@@ -24,6 +24,11 @@ export class MessageService implements TechReactiveService<FuncMessage[], Messag
     throw new Error('Method not implemented.');
   }
 
+  /**
+   * Helper for creating specific command and corresponding payload
+   * @param type 
+   * @param payload 
+   */
   public createCommand(type: 'LOAD', payload: null): MessageCommand;
   public createCommand(type: 'SEND', payload: Omit<FuncMessage, 'id'>): MessageCommand;
   public createCommand(type: MessageType, payload: null | Omit<FuncMessage, 'id'>): MessageCommand {
