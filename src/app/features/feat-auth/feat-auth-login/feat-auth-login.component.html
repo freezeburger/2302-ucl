@@ -2,10 +2,17 @@
 
     <!-- div.d-flex.flex-column>input.form-control*2 -->
     <div class="d-flex flex-column">
-        <input type="text" class="form-control m-2" placeholder="Email">
-        <input type="password" class="form-control m-2" placeholder="Password">
+        <input 
+            type="text" class="form-control m-2" 
+            placeholder="Email"
+            [(ngModel)]="credentials.email">
+        <input 
+            type="password" 
+            class="form-control m-2" 
+            placeholder="Password"
+            [(ngModel)]="credentials.password">
     </div>
 
-    <ucl-button [disabled]="true">Sign me In !</ucl-button>
+    <ucl-button [disabled]="true" (click)="requestLogin()">Sign me In !</ucl-button>
 
 </ucl-card>

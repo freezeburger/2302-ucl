@@ -14,6 +14,10 @@ export class FeatAuthRegisterComponent {
     controlPassword:''
   }
 
+  requestRegistration(){
+    console.log(this.credentials)
+  }
+
 }
 
 export interface FuncUserRegistration extends FuncUser{

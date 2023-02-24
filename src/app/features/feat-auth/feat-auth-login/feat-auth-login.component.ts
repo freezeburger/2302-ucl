@@ -12,5 +12,9 @@ export class FeatAuthLoginComponent {
     email:'',
     password:''
   }
-  
+
+  requestLogin(){
+    console.log(this.credentials)
+  }
+
 }
