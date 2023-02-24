@@ -1,6 +1,18 @@
 <nav class="bg-light">
     <ul ngbNav class="nav-tabs" [activeId]="router.url">
         
+        <li [ngbNavItem]=" route.path | withPathRoot  " *ngFor="let route of routes"> 
+            <a ngbNavLink routerLink="{{ route.path | withPathRoot }}">
+                {{ route.path | titlecase }}
+            </a>
+        </li>
+
+    </ul>
+</nav>
+<!-- 
+    <nav class="bg-light">
+    <ul ngbNav class="nav-tabs" [activeId]="router.url">
+        
         <li [ngbNavItem]=" 'home' | withPathRoot  "> 
             <a ngbNavLink routerLink="{{ 'home' | withPathRoot }}">Home</a>
         </li>
@@ -11,4 +23,4 @@
             <a ngbNavLink routerLink="{{ 'info' | withPathRoot }}">Info</a>
         </li>
     </ul>
-</nav>
+</nav> -->

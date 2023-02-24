@@ -7,7 +7,7 @@ import { ViewMessageComponent } from './view-message/view-message.component';
 const routes: Routes = [
   {
     path:'info',
-    component:ViewInfoComponent
+    component:ViewInfoComponent,
   },
   {
     path:'message',
