@@ -1,6 +1,6 @@
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, catchError, map, of } from 'rxjs';
+import { BehaviorSubject, catchError, map, Observable, of } from 'rxjs';
 import { FuncUser } from '../interfaces/functional/user';
 import { TechReactiveService } from '../interfaces/technical/reactive-service';
 
@@ -26,11 +26,22 @@ export interface AuthState extends Pick<AuthResult, 'email' | 'message'> {
 }
 
 @Injectable()
-export class AuthService implements TechReactiveService<AuthState, AuthCommand>{
+export class AuthService implements HttpInterceptor, TechReactiveService<AuthState, AuthCommand>{
 
   constructor(
     private http: HttpClient
   ) { }
+
+  public intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+
+    if(req.url.includes('auth')) return next.handle(req);
+
+    const authReq = req.clone({
+      headers: req.headers.set('Authorization', 'Bearer ' + this.authToken)
+    });
+
+    return next.handle(authReq);
+  }
 
   public dataSource$ = new BehaviorSubject<AuthState>({
     email: '',

@@ -5,7 +5,7 @@ import { MessageService } from './services/message.service';
 import { BusEventService } from './services/bus-event.service';
 import { LogService } from './services/log.service';
 import { UCL_APPLICATION_LOGGER } from 'ucl';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 @NgModule({
   imports: [
@@ -28,6 +28,11 @@ import { HttpClientModule } from '@angular/common/http';
     {
       provide: APP_BOOTSTRAP_LISTENER,
       useValue: () => console.warn('App Bootstraped'),
+      multi: true
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useExisting: AuthService,
       multi: true
     }
   ]
