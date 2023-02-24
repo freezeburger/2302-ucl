@@ -14,9 +14,9 @@ export class AuthService {
     private http:HttpClient
   ) { }
 
-  private handleError = (err:HttpErrorResponse ) => {
-    console.log(err); 
-    return of(null)
+  private handleError = (res:HttpErrorResponse ) => {
+    // console.log(res); 
+    return of(res.error)
   }
 
   login(credentials:FuncUser){
