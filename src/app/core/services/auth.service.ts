@@ -7,6 +7,11 @@ const AUTH_API = 'http://localhost:5050/auth';
 const AUTH_LOGIN = AUTH_API + '/login';
 const AUTH_REGISTER = AUTH_API + '/register';
 
+interface AuthResult extends FuncUser{
+  error?:{status:number,message:string}
+  access_token?:string;
+}
+
 @Injectable()
 export class AuthService {
 
@@ -19,13 +24,17 @@ export class AuthService {
     return of(res.error)
   }
 
+  processInfo = (data: any) => {
+    console.table(data)
+  }
+
   login(credentials: FuncUser) {
     // Credentials Sanitization
     this.http.post(AUTH_LOGIN, credentials)
       .pipe(
         catchError(this.handleError)
       )
-      .subscribe(console.log)
+      .subscribe(this.processInfo)
   }
 
   register(credentials: FuncUser) {
@@ -34,7 +43,7 @@ export class AuthService {
       .pipe(
         catchError(this.handleError)
       )
-      .subscribe(console.log)
+      .subscribe(this.processInfo)
   }
 
 }
