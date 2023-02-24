@@ -35,7 +35,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
       useExisting: AuthService,
       multi: true
     },
-    { provide: LOCALE_ID, useValue: 'fr-FR' }
+    //{ provide: LOCALE_ID, useValue: 'fr-FR' }
   ]
 })
 export class CoreModule {
