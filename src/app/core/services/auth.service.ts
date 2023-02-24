@@ -21,7 +21,9 @@ export interface AuthCommand {
   payload: FuncUser
 }
 
-export interface AuthState extends Pick<AuthResult, 'email' | 'message'> { }
+export interface AuthState extends Pick<AuthResult, 'email' | 'message'> {
+
+}
 
 @Injectable()
 export class AuthService implements TechReactiveService<AuthState, AuthCommand>{

@@ -2,6 +2,10 @@
 
     <!-- div.d-flex.flex-column>input.form-control*2 -->
     <div class="d-flex flex-column">
+        <div class="alert alert-info" 
+            *ngIf="(authService.dataSource$ | async)?.message as message">
+            {{message}}
+        </div>
         <input 
             type="text" class="form-control m-2" 
             placeholder="Email"
@@ -16,6 +20,6 @@
             [(ngModel)]="credentials.password">
     </div>
 
-    <ucl-button [disabled]="true" (click)="requestLogin()">Sign me In !</ucl-button>
+    <ucl-button (click)="requestLogin()">Sign me In !</ucl-button>
 
 </ucl-card>
