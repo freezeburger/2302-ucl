@@ -13,6 +13,15 @@ interface AuthResult extends FuncUser {
   access_token?: string;
 }
 
+export type AuthType = 'LOGIN' | 'REGISTER';
+
+export interface AuthCommand{
+  type:AuthType,
+  payload:FuncUser
+}
+
+export interface AuthState extends Pick<AuthResult,'email' | 'message'>{}
+
 @Injectable()
 export class AuthService {
 
