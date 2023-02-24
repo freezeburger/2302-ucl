@@ -7,19 +7,21 @@ import { ViewMessageComponent } from './view-message/view-message.component';
 const routes: Routes = [
   {
     path: 'home',
-    component: ViewHomeComponent
+    component: ViewHomeComponent,
+    loadChildren: () => import('../features/feat-auth/feat-auth.module')
+      .then(m => m.FeatAuthModule)
   },
   {
     path: 'message',
     component: ViewMessageComponent,
-    loadChildren:() => import('../features/feat-message/feat-message.module')
-                             .then( m => m.FeatMessageModule)
+    loadChildren: () => import('../features/feat-message/feat-message.module')
+      .then(m => m.FeatMessageModule)
   },
   {
     path: 'info',
     component: ViewInfoComponent,
-    loadChildren:() => import('../features/feat-info/feat-info.module')
-                             .then( m => m.FeatInfoModule)
+    loadChildren: () => import('../features/feat-info/feat-info.module')
+      .then(m => m.FeatInfoModule)
   },
   {
     path: '**',

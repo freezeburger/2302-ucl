@@ -105,6 +105,72 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 </li>
                             </li>
                             <li class="link">
+                                <a href="modules/FeatAuthModule.html" data-type="entity-link" >FeatAuthModule</a>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                            'data-target="#components-links-module-FeatAuthModule-0dd3dd21e5779ccb856b8057da0282406f6467b7640086bbe28eb82bb5f2784c1bb14bfb8a1d449002839792575bf15e98826826e275db970ff131feb153da8f"' : 'data-target="#xs-components-links-module-FeatAuthModule-0dd3dd21e5779ccb856b8057da0282406f6467b7640086bbe28eb82bb5f2784c1bb14bfb8a1d449002839792575bf15e98826826e275db970ff131feb153da8f"' }>
+                                            <span class="icon ion-md-cog"></span>
+                                            <span>Components</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-FeatAuthModule-0dd3dd21e5779ccb856b8057da0282406f6467b7640086bbe28eb82bb5f2784c1bb14bfb8a1d449002839792575bf15e98826826e275db970ff131feb153da8f"' :
+                                            'id="xs-components-links-module-FeatAuthModule-0dd3dd21e5779ccb856b8057da0282406f6467b7640086bbe28eb82bb5f2784c1bb14bfb8a1d449002839792575bf15e98826826e275db970ff131feb153da8f"' }>
+                                            <li class="link">
+                                                <a href="components/FeatAuthLoginComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >FeatAuthLoginComponent</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/FeatAuthRegisterComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >FeatAuthRegisterComponent</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                            </li>
+                            <li class="link">
+                                <a href="modules/FeatAuthRoutingModule.html" data-type="entity-link" >FeatAuthRoutingModule</a>
+                            </li>
+                            <li class="link">
+                                <a href="modules/FeatInfoModule.html" data-type="entity-link" >FeatInfoModule</a>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                            'data-target="#components-links-module-FeatInfoModule-c70ebca03ca79616b5a36dc1ed14d80c6eb33ffc13570be73c846b30d2142114f1f8a116e718ce62fad3fa9869b905498be9b8b25e5aa1645bb3f7330516526a"' : 'data-target="#xs-components-links-module-FeatInfoModule-c70ebca03ca79616b5a36dc1ed14d80c6eb33ffc13570be73c846b30d2142114f1f8a116e718ce62fad3fa9869b905498be9b8b25e5aa1645bb3f7330516526a"' }>
+                                            <span class="icon ion-md-cog"></span>
+                                            <span>Components</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-FeatInfoModule-c70ebca03ca79616b5a36dc1ed14d80c6eb33ffc13570be73c846b30d2142114f1f8a116e718ce62fad3fa9869b905498be9b8b25e5aa1645bb3f7330516526a"' :
+                                            'id="xs-components-links-module-FeatInfoModule-c70ebca03ca79616b5a36dc1ed14d80c6eb33ffc13570be73c846b30d2142114f1f8a116e718ce62fad3fa9869b905498be9b8b25e5aa1645bb3f7330516526a"' }>
+                                            <li class="link">
+                                                <a href="components/FeatInfoComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >FeatInfoComponent</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                            </li>
+                            <li class="link">
+                                <a href="modules/FeatInfoRoutingModule.html" data-type="entity-link" >FeatInfoRoutingModule</a>
+                            </li>
+                            <li class="link">
+                                <a href="modules/FeatMessageModule.html" data-type="entity-link" >FeatMessageModule</a>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                            'data-target="#components-links-module-FeatMessageModule-a41cdc31324a595246227ff8249b6eafd9724c53936beef5ddc887f34376440f6b19115904ad7c384672e98167af2735e7b6a2ad78da7975493867d6d63d59ad"' : 'data-target="#xs-components-links-module-FeatMessageModule-a41cdc31324a595246227ff8249b6eafd9724c53936beef5ddc887f34376440f6b19115904ad7c384672e98167af2735e7b6a2ad78da7975493867d6d63d59ad"' }>
+                                            <span class="icon ion-md-cog"></span>
+                                            <span>Components</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-FeatMessageModule-a41cdc31324a595246227ff8249b6eafd9724c53936beef5ddc887f34376440f6b19115904ad7c384672e98167af2735e7b6a2ad78da7975493867d6d63d59ad"' :
+                                            'id="xs-components-links-module-FeatMessageModule-a41cdc31324a595246227ff8249b6eafd9724c53936beef5ddc887f34376440f6b19115904ad7c384672e98167af2735e7b6a2ad78da7975493867d6d63d59ad"' }>
+                                            <li class="link">
+                                                <a href="components/FeatMessageComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >FeatMessageComponent</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                            </li>
+                            <li class="link">
+                                <a href="modules/FeatMessageRoutingModule.html" data-type="entity-link" >FeatMessageRoutingModule</a>
+                            </li>
+                            <li class="link">
+                                <a href="modules/FeaturesModule.html" data-type="entity-link" >FeaturesModule</a>
+                            </li>
+                            <li class="link">
                                 <a href="modules/NgImportModule.html" data-type="entity-link" >NgImportModule</a>
                             </li>
                             <li class="link">
@@ -189,19 +255,41 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                         </div>
                         <ul class="links collapse " ${ isNormalMode ? ' id="interfaces-links"' : 'id="xs-interfaces-links"' }>
                             <li class="link">
-                                <a href="interfaces/FMessage.html" data-type="entity-link" >FMessage</a>
+                                <a href="interfaces/FuncMessage.html" data-type="entity-link" >FuncMessage</a>
                             </li>
                             <li class="link">
-                                <a href="interfaces/FUser.html" data-type="entity-link" >FUser</a>
+                                <a href="interfaces/FuncUser.html" data-type="entity-link" >FuncUser</a>
                             </li>
                             <li class="link">
-                                <a href="interfaces/TAppDispatcher.html" data-type="entity-link" >TAppDispatcher</a>
+                                <a href="interfaces/TechAction.html" data-type="entity-link" >TechAction</a>
                             </li>
                             <li class="link">
-                                <a href="interfaces/TEventManager.html" data-type="entity-link" >TEventManager</a>
+                                <a href="interfaces/TechAppDispatcher.html" data-type="entity-link" >TechAppDispatcher</a>
                             </li>
                             <li class="link">
-                                <a href="interfaces/TReactiveService.html" data-type="entity-link" >TReactiveService</a>
+                                <a href="interfaces/TechEventManager.html" data-type="entity-link" >TechEventManager</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/TechReactiveService.html" data-type="entity-link" >TechReactiveService</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ? 'data-target="#miscellaneous-links"'
+                            : 'data-target="#xs-miscellaneous-links"' }>
+                            <span class="icon ion-ios-cube"></span>
+                            <span>Miscellaneous</span>
+                            <span class="icon ion-ios-arrow-down"></span>
+                        </div>
+                        <ul class="links collapse " ${ isNormalMode ? 'id="miscellaneous-links"' : 'id="xs-miscellaneous-links"' }>
+                            <li class="link">
+                                <a href="miscellaneous/enumerations.html" data-type="entity-link">Enums</a>
+                            </li>
+                            <li class="link">
+                                <a href="miscellaneous/typealiases.html" data-type="entity-link">Type aliases</a>
+                            </li>
+                            <li class="link">
+                                <a href="miscellaneous/variables.html" data-type="entity-link">Variables</a>
                             </li>
                         </ul>
                     </li>

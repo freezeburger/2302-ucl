@@ -6,6 +6,8 @@ import { WithPathRootPipe } from './pipes/with-path-root.pipe';
 import { PausableDirective } from './directives/pausable.directive';
 import { ViewModalComponent } from './view-modal/view-modal.component';
 import { RouterNavComponent } from './router-nav/router-nav.component';
+import { CardComponent } from './card/card.component';
+import { ButtonComponent } from './button/button.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { RouterNavComponent } from './router-nav/router-nav.component';
     WithPathRootPipe,
     PausableDirective,
     ViewModalComponent,
-    RouterNavComponent
+    RouterNavComponent,
+    CardComponent,
+    ButtonComponent
   ],
   imports: [
     SharedModule
@@ -23,7 +27,9 @@ import { RouterNavComponent } from './router-nav/router-nav.component';
     PageTitleDirective,
     PausableDirective,
     ViewTemplateComponent,
-    ViewModalComponent
+    ViewModalComponent,
+    CardComponent,
+    ButtonComponent
   ]
 })
 export class UclModule { }

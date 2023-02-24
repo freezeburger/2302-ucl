@@ -142,9 +142,9 @@ export class ViewMessageComponent {
 
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;ucl-view-template pageTitle&#x3D;&quot;Message&quot;&gt;
-    Message Content
-&lt;/ucl-view-template&gt;
-</code></pre>
+    &lt;h3&gt;Messager&lt;/h3&gt;
+    &lt;router-outlet&gt;&lt;/router-outlet&gt;
+&lt;/ucl-view-template&gt;</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-styleData">
@@ -179,8 +179,8 @@ export class ViewMessageComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><ucl-view-template pageTitle="Message">    Message Content</ucl-view-template></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'SplashScreenComponent', 'selector': 'app-splash-screen'},{'name': 'ViewHomeComponent', 'selector': 'app-view-home'},{'name': 'ViewInfoComponent', 'selector': 'app-view-info'},{'name': 'ViewMessageComponent', 'selector': 'app-view-message'}];
+        var COMPONENT_TEMPLATE = '<div><ucl-view-template pageTitle="Message">    <h3>Messager</h3>    <router-outlet></router-outlet></ucl-view-template></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'FeatAuthLoginComponent', 'selector': 'app-feat-auth-login'},{'name': 'FeatAuthRegisterComponent', 'selector': 'app-feat-auth-register'},{'name': 'FeatInfoComponent', 'selector': 'app-feat-info'},{'name': 'FeatMessageComponent', 'selector': 'app-feat-message'},{'name': 'SplashScreenComponent', 'selector': 'app-splash-screen'},{'name': 'ViewHomeComponent', 'selector': 'app-view-home'},{'name': 'ViewInfoComponent', 'selector': 'app-view-info'},{'name': 'ViewMessageComponent', 'selector': 'app-view-message'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'ViewMessageComponent'};
 </script>

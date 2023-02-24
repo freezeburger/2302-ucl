@@ -1,11 +1,15 @@
-<ucl-view-template 
-    uclPausable
-    (onTogglePause)="handlePause($event)"
-    uclPageTitle="Home !!!">
-    Home Content
+<ucl-view-template uclPausable (onTogglePause)="handlePause($event)" uclPageTitle="UCL Home">
+
+    <h3>Welcome</h3>
+
+    <div class="m-3">
+        <a routerLink="login">Sign in</a> | <a routerLink="register">Create Account</a>
+    </div>
+
+    <router-outlet></router-outlet>
 
     <ucl-view-modal>
         Modal Content
     </ucl-view-modal>
-    
+
 </ucl-view-template>

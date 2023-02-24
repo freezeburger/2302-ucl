@@ -28,99 +28,69 @@
                    <compodoc-menu mode="normal"></compodoc-menu>
                </div>
                <!-- START CONTENT -->
-               <div class="content module">
+               <div class="content interface">
                    <div class="content-data">
 
 
 
+
+
+
+
+
+
+
+
+
+
 <ol class="breadcrumb">
-    <li>Modules</li>
-    <li >ViewRoutingModule</li>
+  <li>Interfaces</li>
+  <li
+  >
+  TechEventManager</li>
 </ol>
 
-
 <ul class="nav nav-tabs" role="tablist">
-    <li  class="active" >
-        <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
-    </li>
-    <li >
-        <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
-    </li>
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
 </ul>
 
 <div class="tab-content">
     <div class="tab-pane fade active in" id="c-info">
-
         <p class="comment">
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/app/view/view-routing.module.ts</code>
+            <code>src/app/core/interfaces/technical/event-manager.ts</code>
         </p>
 
 
 
+            <p class="comment">
+                <h3>Extends</h3>
+            </p>
+            <p class="comment">
+                        <code><a href="https://angular.io/api/core/EventEmitter" target="_blank" >EventEmitter</a></code>
+            </p>
 
 
-        <div class="container-fluid module">
-            <div class="row">
-            </div>
-        </div>
 
 
     </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
-import { RouterModule, Routes } from &#x27;@angular/router&#x27;;
-import { ViewHomeComponent } from &#x27;./view-home/view-home.component&#x27;;
-import { ViewInfoComponent } from &#x27;./view-info/view-info.component&#x27;;
-import { ViewMessageComponent } from &#x27;./view-message/view-message.component&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { EventEmitter } from &quot;@angular/core&quot;;
 
-const routes: Routes &#x3D; [
-  {
-    path: &#x27;home&#x27;,
-    component: ViewHomeComponent,
-    loadChildren: () &#x3D;&gt; &quot;import(&#x27;../features/feat-auth/feat-auth.module&#x27;)\
-      .then(m &#x3D;&gt; m.FeatAuthModule)&quot;
-  },
-  {
-    path: &#x27;message&#x27;,
-    component: ViewMessageComponent,
-    loadChildren: () &#x3D;&gt; &quot;import(&#x27;../features/feat-message/feat-message.module&#x27;)\
-      .then(m &#x3D;&gt; m.FeatMessageModule)&quot;
-  },
-  {
-    path: &#x27;info&#x27;,
-    component: ViewInfoComponent,
-    loadChildren: () &#x3D;&gt; &quot;import(&#x27;../features/feat-info/feat-info.module&#x27;)\
-      .then(m &#x3D;&gt; m.FeatInfoModule)&quot;
-  },
-  {
-    path: &#x27;**&#x27;,
-    redirectTo: &#x27;home&#x27;,
-    pathMatch: &#x27;prefix&#x27;
-  }
-];
-
-@NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
-})
-export class ViewRoutingModule { }
+export interface TechEventManager extends EventEmitter&lt;any&gt; {
+}
 </code></pre>
     </div>
 </div>
-
-
-
-
-
-
-
-
-
 
 
 
@@ -154,8 +124,8 @@ export class ViewRoutingModule { }
 
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
-            var COMPODOC_CURRENT_PAGE_CONTEXT = 'module';
-            var COMPODOC_CURRENT_PAGE_URL = 'ViewRoutingModule.html';
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'interface';
+            var COMPODOC_CURRENT_PAGE_URL = 'TechEventManager.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

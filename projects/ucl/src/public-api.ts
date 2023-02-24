@@ -9,6 +9,9 @@ export * from './lib/ucl.module';
  */
 export * from './lib/view-template/view-template.component';
 export * from './lib/router-nav/router-nav.component';
+export * from './lib/card/card.component';
+export * from './lib/button/button.component';
+
 /**
  * Directives
  */
