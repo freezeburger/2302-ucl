@@ -18,6 +18,8 @@ const routes: Routes = [
   {
     path: 'info',
     component: ViewInfoComponent,
+    loadChildren:() => import('../features/feat-info/feat-info.module')
+                             .then( m => m.FeatInfoModule)
   },
   {
     path: '**',
