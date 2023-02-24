@@ -21,7 +21,12 @@ export class MessageService implements TechReactiveService<FuncMessage[], Messag
   public dataSource$ = new BehaviorSubject<FuncMessage[]>([]);
 
   public execute(command: MessageCommand): void {
-    throw new Error('Method not implemented.');
+    switch (command.type) {
+      case 'LOAD':
+        this.http.get<FuncMessage[]>( 'http://localhost:5050/messages')
+                 .subscribe( data => this.dataSource$.next(data) )
+        break;
+    }
   }
 
   /**

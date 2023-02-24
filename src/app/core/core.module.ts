@@ -1,4 +1,4 @@
-import { APP_BOOTSTRAP_LISTENER, APP_INITIALIZER, inject, Inject, NgModule } from '@angular/core';
+import { APP_BOOTSTRAP_LISTENER, APP_INITIALIZER, inject, Inject, LOCALE_ID, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AuthService } from './services/auth.service';
 import { MessageService } from './services/message.service';
@@ -34,7 +34,8 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
       provide: HTTP_INTERCEPTORS,
       useExisting: AuthService,
       multi: true
-    }
+    },
+    { provide: LOCALE_ID, useValue: 'fr-FR' }
   ]
 })
 export class CoreModule {

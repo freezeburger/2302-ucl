@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MessageService } from 'src/app/core/services/message.service';
 
 @Component({
@@ -6,10 +6,16 @@ import { MessageService } from 'src/app/core/services/message.service';
   templateUrl: './feat-message.component.html',
   styleUrls: ['./feat-message.component.scss']
 })
-export class FeatMessageComponent {
+export class FeatMessageComponent implements OnInit {
   constructor(
-    public messageService:MessageService
-  ) {
-   
+    public messageService: MessageService
+  ) { }
+
+
+  ngOnInit(): void {
+    const command = this.messageService.createCommand('LOAD', null);
+    this.messageService.execute(command);
   }
+
+
 }
