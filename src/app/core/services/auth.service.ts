@@ -1,7 +1,8 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { catchError, map, of } from 'rxjs';
+import { BehaviorSubject, catchError, map, of } from 'rxjs';
 import { FuncUser } from '../interfaces/functional/user';
+import { TechReactiveService } from '../interfaces/technical/reactive-service';
 
 const AUTH_API = 'http://localhost:5050/auth';
 const AUTH_LOGIN = AUTH_API + '/login';
@@ -15,19 +16,35 @@ interface AuthResult extends FuncUser {
 
 export type AuthType = 'LOGIN' | 'REGISTER';
 
-export interface AuthCommand{
-  type:AuthType,
-  payload:FuncUser
+export interface AuthCommand {
+  type: AuthType,
+  payload: FuncUser
 }
 
-export interface AuthState extends Pick<AuthResult,'email' | 'message'>{}
+export interface AuthState extends Pick<AuthResult, 'email' | 'message'> { }
 
 @Injectable()
-export class AuthService {
+export class AuthService implements TechReactiveService<AuthState, AuthCommand>{
 
   constructor(
     private http: HttpClient
   ) { }
+
+  public dataSource$ = new BehaviorSubject<AuthState>({
+    email: '',
+    message: ''
+  });
+
+  public execute(command: AuthCommand): void {
+    switch (command.type) {
+      case 'LOGIN':
+        this.login(command.payload)
+        break;
+      case 'REGISTER':
+        this.login(command.payload)
+        break;
+    }
+  }
 
   private authToken: string | null = null;
 
