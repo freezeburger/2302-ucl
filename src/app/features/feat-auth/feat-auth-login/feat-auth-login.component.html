@@ -1,15 +1,18 @@
-<ucl-card cardTitle="Login with existing account.">
+<ucl-card cardTitle="Login with existing account." >
 
     <!-- div.d-flex.flex-column>input.form-control*2 -->
     <div class="d-flex flex-column">
         <input 
             type="text" class="form-control m-2" 
             placeholder="Email"
+            [uclFeedback]="1.025"
             [(ngModel)]="credentials.email">
         <input 
             type="password" 
             class="form-control m-2" 
             placeholder="Password"
+            [uclFeedback]="1.025"
+            uclRevealPassword
             [(ngModel)]="credentials.password">
     </div>
 

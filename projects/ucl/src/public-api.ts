@@ -17,6 +17,8 @@ export * from './lib/button/button.component';
  */
 export * from './lib/directives/page-title.directive';
 export * from './lib/directives/pausable.directive';
+export * from './lib/directives/feedback.directive';
+export * from './lib/directives/reveal-password.directive';
 
 /**
  * Utils
