@@ -20,11 +20,11 @@ export class RouterNavComponent {
       this.activeRoute.parent?.snapshot.pathFromRoot 
       */
       );
-      /* 
-      (this.activeRoute.parent as any).routeConfig['_loadedRoutes'].push(
-        {path:'hello', component:ViewTemplateComponent}
-      ) 
-      */
+      
+      /* (this.activeRoute.parent as any).routeConfig['_loadedRoutes'].push(
+        {path: 'r'+ Math.random(), component:ViewTemplateComponent}
+      ) */ 
+      
   }
 
   get routes(){

@@ -7,3 +7,4 @@ export interface TechReactiveService<DataUnit, Command> {
     execute(command:Command):void;
 
 }
+    

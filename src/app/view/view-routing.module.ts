@@ -6,16 +6,16 @@ import { ViewMessageComponent } from './view-message/view-message.component';
 
 const routes: Routes = [
   {
-    path:'info',
-    component:ViewInfoComponent,
+    path:'home',
+    component:ViewHomeComponent
   },
   {
     path:'message',
     component:ViewMessageComponent
   },
   {
-    path:'home',
-    component:ViewHomeComponent
+    path:'info',
+    component:ViewInfoComponent,
   },
   {
     path:'**',
