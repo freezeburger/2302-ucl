@@ -11,6 +11,7 @@ export class FeatMessageComponent implements OnInit {
     public messageService: MessageService
   ) { }
 
+  public filterTitle = '';
 
   ngOnInit(): void {
     const command = this.messageService.createCommand('LOAD', null);

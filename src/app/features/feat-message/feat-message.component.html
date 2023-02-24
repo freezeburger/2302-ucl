@@ -12,9 +12,12 @@
 
     <ul class="list-group" *ngIf="messages.length">
         <li class="list-group-item">
-            <input class="form-control" placeholder="Filter messages">
+            <input class="form-control" 
+            placeholder="Filter messages" 
+            [(ngModel)]="filterTitle">
         </li>
-        <li class="list-group-item" *ngFor="let msg of messages">
+        <li class="list-group-item" 
+            *ngFor="let msg of messages | sortByTitle:filterTitle">
             <h4>{{msg.title}}</h4>
             <h5>{{msg.time | date}}</h5>
             <p>{{msg.content}}</p>

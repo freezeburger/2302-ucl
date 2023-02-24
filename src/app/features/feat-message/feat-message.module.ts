@@ -1,16 +1,18 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 import { FeatMessageRoutingModule } from './feat-message-routing.module';
 import { FeatMessageComponent } from './feat-message.component';
+import { SortByTitlePipe } from './sort-by-title.pipe';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
   declarations: [
-    FeatMessageComponent
+    FeatMessageComponent,
+    SortByTitlePipe
   ],
   imports: [
-    CommonModule,
+    SharedModule,
     FeatMessageRoutingModule
   ],
   exports: [
