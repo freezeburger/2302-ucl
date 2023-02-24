@@ -6,21 +6,23 @@ import { ViewMessageComponent } from './view-message/view-message.component';
 
 const routes: Routes = [
   {
-    path:'home',
-    component:ViewHomeComponent
+    path: 'home',
+    component: ViewHomeComponent
   },
   {
-    path:'message',
-    component:ViewMessageComponent
+    path: 'message',
+    component: ViewMessageComponent,
+    loadChildren:() => import('../features/feat-message/feat-message.module')
+                             .then( m => m.FeatMessageModule)
   },
   {
-    path:'info',
-    component:ViewInfoComponent,
+    path: 'info',
+    component: ViewInfoComponent,
   },
   {
-    path:'**',
-    redirectTo:'home',
-    pathMatch:'prefix'
+    path: '**',
+    redirectTo: 'home',
+    pathMatch: 'prefix'
   }
 ];
 
