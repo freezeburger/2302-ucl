@@ -5,7 +5,7 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 import { AppModule } from './app/app.module';
 
-import './promise-to-observable';
+// import './promise-to-observable';
 
 console.log('Firt Script');
 
