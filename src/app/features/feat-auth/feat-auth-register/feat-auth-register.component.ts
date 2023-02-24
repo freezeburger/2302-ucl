@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FuncUser } from 'src/app/core/interfaces/functional/user';
 
 @Component({
   selector: 'app-feat-auth-register',
@@ -7,4 +8,14 @@ import { Component } from '@angular/core';
 })
 export class FeatAuthRegisterComponent {
 
+  credentials:FuncUserRegistration = {
+    email:'',
+    password:'',
+    controlPassword:''
+  }
+
+}
+
+export interface FuncUserRegistration extends FuncUser{
+  controlPassword:string;
 }
