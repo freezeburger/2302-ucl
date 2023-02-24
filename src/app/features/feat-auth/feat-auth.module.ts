@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 import { FeatAuthRoutingModule } from './feat-auth-routing.module';
 import { FeatAuthLoginComponent } from './feat-auth-login/feat-auth-login.component';
 import { FeatAuthRegisterComponent } from './feat-auth-register/feat-auth-register.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
@@ -12,7 +12,7 @@ import { FeatAuthRegisterComponent } from './feat-auth-register/feat-auth-regist
     FeatAuthRegisterComponent
   ],
   imports: [
-    CommonModule,
+    SharedModule,
     FeatAuthRoutingModule
   ],
   exports: [
