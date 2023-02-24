@@ -1,1 +1,12 @@
-<p>feat-auth-register works!</p>
+<ucl-card cardTitle="Create new account.">
+
+    <!-- div.d-flex.flex-column>input.form-control*2 -->
+    <div class="d-flex flex-column">
+        <input type="text" class="form-control m-2" placeholder="Email">
+        <input type="text" class="form-control m-2" placeholder="Password">
+        <input type="text" class="form-control m-2" placeholder="Password Control">
+    </div>
+
+    <ucl-button [disabled]="true">Register</ucl-button>
+
+</ucl-card>
