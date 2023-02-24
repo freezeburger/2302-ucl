@@ -20,7 +20,7 @@ export class AuthService {
 
   register(credentials:FuncUser){
     // Crendentials Sanitization
-    this.http.post(AUTH_LOGIN, credentials).subscribe(console.log)
+    this.http.post(AUTH_REGISTER, credentials).subscribe(console.log)
   }
 
 }
