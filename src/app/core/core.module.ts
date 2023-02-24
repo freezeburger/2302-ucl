@@ -39,6 +39,6 @@ export class CoreModule {
     private auth: AuthService
   ) {
     console.warn(this.auth)
-    auth.login({ email: 'orsys@orsys.fr', password: 'orsy' })
+    // auth.login({ email: 'orsys@orsys.fr', password: 'orsys' })
   }
 }
