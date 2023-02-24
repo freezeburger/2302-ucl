@@ -1,6 +1,6 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { catchError, of } from 'rxjs';
+import { catchError, map, of } from 'rxjs';
 import { FuncUser } from '../interfaces/functional/user';
 
 const AUTH_API = 'http://localhost:5050/auth';
@@ -8,7 +8,8 @@ const AUTH_LOGIN = AUTH_API + '/login';
 const AUTH_REGISTER = AUTH_API + '/register';
 
 interface AuthResult extends FuncUser{
-  error?:{status:number,message:string}
+  status?:number;
+  message?:string;
   access_token?:string;
 }
 
@@ -24,7 +25,7 @@ export class AuthService {
     return of(res.error)
   }
 
-  processInfo = (data: any) => {
+  private processInfo = (data: AuthResult) => {
     console.table(data)
   }
 
@@ -32,7 +33,8 @@ export class AuthService {
     // Credentials Sanitization
     this.http.post(AUTH_LOGIN, credentials)
       .pipe(
-        catchError(this.handleError)
+        catchError(this.handleError),
+        map( data => Object.assign({}, credentials, data) )
       )
       .subscribe(this.processInfo)
   }
@@ -41,7 +43,8 @@ export class AuthService {
     // Credentials Sanitization
     this.http.post(AUTH_REGISTER, credentials)
       .pipe(
-        catchError(this.handleError)
+        catchError(this.handleError),
+        map( data => Object.assign({}, credentials, data) )
       )
       .subscribe(this.processInfo)
   }
