@@ -14,12 +14,12 @@ export class AuthService {
   ) { }
 
   login(credentials:FuncUser){
-    // Crendentials Sanitization
+    // Credentials Sanitization
     this.http.post(AUTH_LOGIN, credentials).subscribe(console.log)
   }
 
   register(credentials:FuncUser){
-    // Crendentials Sanitization
+    // Credentials Sanitization
     this.http.post(AUTH_REGISTER, credentials).subscribe(console.log)
   }
 

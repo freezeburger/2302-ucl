@@ -5,20 +5,20 @@ import { MessageService } from './services/message.service';
 import { BusEventService } from './services/bus-event.service';
 import { LogService } from './services/log.service';
 import { UCL_APPLICATION_LOGGER } from 'ucl';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [],
   imports: [
-    CommonModule
+    HttpClientModule
   ],
-  providers:[
+  providers: [
     AuthService,
     MessageService,
     BusEventService,
     LogService,
     {
-      provide:UCL_APPLICATION_LOGGER,
-      useExisting:LogService
+      provide: UCL_APPLICATION_LOGGER,
+      useExisting: LogService
     },
     {
       provide: APP_INITIALIZER,
@@ -32,12 +32,13 @@ import { UCL_APPLICATION_LOGGER } from 'ucl';
     }
   ]
 })
-export class CoreModule { 
+export class CoreModule {
   // auth = inject(AuthService)
   constructor(
     /* @Inject(AuthService) auth:AuthService */
-    private auth:AuthService
-  ){
+    private auth: AuthService
+  ) {
     console.warn(this.auth)
+    auth.login({ email: '', password: '' })
   }
 }
