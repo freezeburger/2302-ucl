@@ -54,8 +54,21 @@ export class AuthService implements TechReactiveService<AuthState, AuthCommand>{
   }
 
   private processInfo = (data: AuthResult) => {
-    if (data.access_token) this.authToken = data.access_token;
-    console.table(data)
+    let dataUpdate:AuthState = {
+      email:'',
+      message:'',
+    };
+
+    if (data.access_token) {
+      this.authToken = data.access_token;
+      dataUpdate.email = data.email;
+      dataUpdate.message = 'Authentification Valid';
+    }else{
+      dataUpdate.message = data.message;
+    }
+    
+    this.dataSource$.next(dataUpdate);
+
   }
 
   private login(credentials: FuncUser) {
